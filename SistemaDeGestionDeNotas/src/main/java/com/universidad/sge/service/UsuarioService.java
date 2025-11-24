@@ -33,4 +33,8 @@ public class UsuarioService {
     public String obtenerDescripcion(Usuario usuario) {
         return usuario.getDescripcionRol();
     }
+    
+    public Optional<Usuario> obtenerPorId(String id) {
+        return usuarioRepository.findById(id);
+    }
 }

@@ -37,7 +37,7 @@ public class UsuarioController {
     
     @GetMapping("/perfil/{id}")
     public ResponseEntity<Usuario> obtenerPerfil(@PathVariable String id) {
-        return usuarioService.usuarioRepository.findById(id)
+        return usuarioService.obtenerPorId(id)
             .map(ResponseEntity::ok)
             .orElse(ResponseEntity.notFound().build());
     }

@@ -22,7 +22,11 @@ public class Evaluacion {
     }
     
     public boolean validarPorcentaje() {
-        return porcentaje >= 1.0 && porcentaje <= 100.0;
+        return porcentaje != null && porcentaje >= 1.0 && porcentaje <= 100.0;
+    }
+
+    public boolean validarNombre() {
+        return nombre != null && !nombre.trim().isEmpty();
     }
     
     public String getId() {

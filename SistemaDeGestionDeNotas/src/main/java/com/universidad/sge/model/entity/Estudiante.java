@@ -4,6 +4,7 @@ import com.universidad.sge.model.enums.ClasificacionEnum;
 import com.universidad.sge.model.enums.RolEnum;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 @Document(collection = "usuarios")
@@ -26,8 +27,28 @@ public class Estudiante extends Usuario {
     }
     
     @Override
-    public String getDescripcionRol() {
-        return "Estudiante - Puede consultar sus notas y promedios";
+    public List<String> getPermisosEspecificos() {
+        return Arrays.asList(
+            "CONSULTAR_NOTAS_POR_CURSO",
+            "CALCULAR_PROMEDIO_CURSO",
+            "CALCULAR_PROMEDIO_GENERAL"
+        );
+    }
+
+    public void actualizarClasificacion() {
+        if (this.promedioGeneral == null) {
+            this.clasificacion = ClasificacionEnum.SIN_CALIFICAR;
+            return;
+        }
+        if (this.promedioGeneral >= 0.0 && this.promedioGeneral < 3.0) {
+            this.clasificacion = ClasificacionEnum.BAJO;
+        } else if (this.promedioGeneral >= 3.0 && this.promedioGeneral < 4.0) {
+            this.clasificacion = ClasificacionEnum.MEDIO;
+        } else if (this.promedioGeneral >= 4.0 && this.promedioGeneral < 4.6) {
+            this.clasificacion = ClasificacionEnum.ALTO;
+        } else if (this.promedioGeneral >= 4.6 && this.promedioGeneral <= 5.0) {
+            this.clasificacion = ClasificacionEnum.EXCELENTE;
+        }
     }
     
     public void inscribirCurso(String cursoId) {

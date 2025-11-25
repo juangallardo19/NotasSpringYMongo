@@ -1,9 +1,11 @@
 package com.universidad.sge.model.entity;
 
 import com.universidad.sge.model.enums.RolEnum;
+import java.time.LocalDateTime;
+import java.util.List;
 
 public abstract class Usuario {
-    
+
     private String id;
     private String nombre;
     private String apellido;
@@ -12,11 +14,13 @@ public abstract class Usuario {
     private String password;
     private RolEnum rol;
     private Boolean activo;
-    
+    private LocalDateTime fechaCreacion;
+
     public Usuario() {
         this.activo = true;
+        this.fechaCreacion = LocalDateTime.now();
     }
-    
+
     public Usuario(String nombre, String apellido, String email, String username, String password, RolEnum rol) {
         this.nombre = nombre;
         this.apellido = apellido;
@@ -25,12 +29,21 @@ public abstract class Usuario {
         this.password = password;
         this.rol = rol;
         this.activo = true;
+        this.fechaCreacion = LocalDateTime.now();
     }
-    
-    public abstract String getDescripcionRol();
-    
+
+    public abstract List<String> getPermisosEspecificos();
+
     public String getNombreCompleto() {
         return apellido + " " + nombre;
+    }
+
+    public boolean validarPassword(String password) {
+        return this.password != null && this.password.equals(password);
+    }
+
+    public boolean isActivo() {
+        return this.activo != null && this.activo;
     }
     
     public String getId() {
@@ -92,8 +105,16 @@ public abstract class Usuario {
     public Boolean getActivo() {
         return activo;
     }
-    
+
     public void setActivo(Boolean activo) {
         this.activo = activo;
+    }
+
+    public LocalDateTime getFechaCreacion() {
+        return fechaCreacion;
+    }
+
+    public void setFechaCreacion(LocalDateTime fechaCreacion) {
+        this.fechaCreacion = fechaCreacion;
     }
 }

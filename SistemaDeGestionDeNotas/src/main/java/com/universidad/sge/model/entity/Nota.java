@@ -1,5 +1,6 @@
 package com.universidad.sge.model.entity;
 
+import com.universidad.sge.model.enums.ClasificacionEnum;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 import java.time.LocalDateTime;
@@ -29,7 +30,23 @@ public class Nota {
     }
     
     public boolean validarRango() {
-        return valor >= 0.0 && valor <= 5.0;
+        return valor != null && valor >= 0.0 && valor <= 5.0;
+    }
+
+    public ClasificacionEnum getClasificacion() {
+        if (this.valor == null) {
+            return ClasificacionEnum.SIN_CALIFICAR;
+        }
+        if (this.valor >= 0.0 && this.valor < 3.0) {
+            return ClasificacionEnum.BAJO;
+        } else if (this.valor >= 3.0 && this.valor < 4.0) {
+            return ClasificacionEnum.MEDIO;
+        } else if (this.valor >= 4.0 && this.valor < 4.6) {
+            return ClasificacionEnum.ALTO;
+        } else if (this.valor >= 4.6 && this.valor <= 5.0) {
+            return ClasificacionEnum.EXCELENTE;
+        }
+        return ClasificacionEnum.SIN_CALIFICAR;
     }
     
     public String getId() {

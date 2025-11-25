@@ -202,10 +202,6 @@ Los diagramas del sistema están en la carpeta `DiagrmasDelSistema/`:
 ### Video y Wiki
 Ver `VIDEO_README.md` para acceder al video de demostración y documentación completa en la wiki.
 
-## Autor
-
-**Juan Gallardo**
-- GitHub: [@juangallardo19](https://github.com/juangallardo19)
 
 ## Licencia
 

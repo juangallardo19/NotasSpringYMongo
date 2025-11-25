@@ -1,14 +1,14 @@
-# 🎥 Video de Demostración - Sistema de Gestión de Evaluaciones
+# Video de Demostración - Sistema de Gestión de Evaluaciones
 
-## 📹 Acceso al Video
+## Acceso al Video
 
 **Link al video en Google Drive:**
 
-🔗 [VER VIDEO EN GOOGLE DRIVE](AQUI_TU_LINK_DE_GOOGLE_DRIVE)
+[VER VIDEO EN YOUTUBE](AQUI_TU_LINK_DE_GOOGLE_DRIVE)
 
 ---
 
-## 📚 Contenido del Video
+## Contenido del Video
 
 Este video contiene una **demostración completa y explicación detallada** de todo lo documentado en la wiki del proyecto. El video cubre los siguientes temas:
 
@@ -19,13 +19,13 @@ Este video contiene una **demostración completa y explicación detallada** de t
 
 ### 2. Análisis de Diagramas
 
-#### 📊 Diagrama de Clases (Desarrollo)
+#### Diagrama de Clases (Desarrollo)
 - **Herencia**: Jerarquía de Usuario → Administrador, Profesor, Estudiante
 - **Polimorfismo**: Implementación del método `getPermisosEspecificos()` en cada clase
 - **Encapsulamiento**: Atributos privados y métodos de validación
 - **Relaciones entre packages**: controller, service, repository, model, dto
 
-#### 🔧 Diagrama de Componentes
+#### Diagrama de Componentes
 - **Arquitectura de 4 capas lógicas**:
   1. Controllers - Capa de presentación (API REST)
   2. Services - Capa de lógica de negocio
@@ -34,7 +34,7 @@ Este video contiene una **demostración completa y explicación detallada** de t
 - **5 componentes funcionales**: Usuarios, Cursos, Evaluaciones, Notas, Reportes
 - **Flujo de comunicación** entre componentes
 
-#### 🖥️ Diagrama de Despliegue
+#### Diagrama de Despliegue
 - **Arquitectura de 3 niveles físicos**:
   1. Cliente (Navegador web)
   2. Servidor de Aplicación (Spring Boot)
@@ -131,7 +131,7 @@ La wiki contiene información adicional sobre:
 
 ---
 
-## 🎯 Audiencia del Video
+## Audiencia del Video
 
 Este video está diseñado para:
 - Estudiantes de Ingeniería de Software
@@ -141,13 +141,9 @@ Este video está diseñado para:
 
 ---
 
-## ⏱️ Duración Estimada
 
-**Duración total del video**: [COMPLETAR_AQUI] minutos
 
----
-
-## 💡 Notas Importantes
+## Notas Importantes
 
 1. El video complementa toda la documentación escrita en la wiki
 2. Se recomienda tener el código abierto mientras se visualiza el video
@@ -156,17 +152,8 @@ Este video está diseñado para:
 
 ---
 
-## 📞 Contacto
 
-Para preguntas o comentarios sobre el video o el proyecto:
-
-**Juan Gallardo**
-- GitHub: [@juangallardo19](https://github.com/juangallardo19)
-- Email: [TU_EMAIL_AQUI]
-
----
-
-## 📝 Registro de Actualizaciones
+## Registro de Actualizaciones
 
 | Fecha | Versión | Cambios |
 |-------|---------|---------|

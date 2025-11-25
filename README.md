@@ -4,8 +4,8 @@ Sistema académico desarrollado con Spring Boot y MongoDB para la gestión de us
 
 ## Tecnologías Utilizadas
 
-- **Java 11**
-- **Spring Boot 2.7.18**
+- **Java**
+- **Spring Boot**
 - **MongoDB** (NoSQL)
 - **Spring Data MongoDB**
 - **Maven**
